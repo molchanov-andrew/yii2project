@@ -30,6 +30,12 @@ return [
                 ],
             ],
         ],
+        'stringHelper' => [
+            'class' => 'common\components\StringHelper',
+        ],
+        'stringHelperAdvance' =>[
+            'class' => 'common\components\StringHelperAdvance',
+        ],
     ],
     'params' => $params,
 ];

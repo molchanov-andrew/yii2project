@@ -48,10 +48,10 @@ return [
             ],
         ],
         'stringHelper' => [
-            'class' => 'frontend\components\StringHelper',
+            'class' => 'common\components\StringHelper',
         ],
         'stringHelperAdvance' =>[
-            'class' => 'frontend\components\StringHelperAdvance',
+            'class' => 'common\components\StringHelperAdvance',
         ],
     ],
     

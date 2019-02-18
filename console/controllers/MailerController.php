@@ -3,6 +3,9 @@
 
 namespace console\controllers;
 use Yii;
+use console\models\News;
+use console\models\Subscriber;
+use console\models\Sender;
 /**
  * 
  */
@@ -11,14 +14,11 @@ class MailerController extends \yii\console\Controller
 	
 	public function actionSend()
 	{
-		$result = Yii::$app->mailer->compose()
-                ->setFrom('andymolchanov@gmail.com')
-                ->setTo('andymolchanov@gmail.com')
-                ->setSubject('Я настроил планировщик')
-                ->setTextBody('Текст сообщения')
-                ->setHtmlBody('<b>текст сообщения в формате HTML</b>')
-                ->send();
-        var_dump($result); die;
+		$newsList = News::getList();
+		$subscriber = Subscriber::getList();
+		$result = Sender::run($subscriber, $newsList);
+		
+		
 	}
 
 }
