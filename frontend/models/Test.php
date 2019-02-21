@@ -35,7 +35,7 @@ class Test
 		}
 		return $result;
 	}
-
+// получаем новость с конкретным id
 	public static function getItem($id)
 	{
 		$id = intval($id);
