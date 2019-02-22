@@ -5,7 +5,7 @@ use Yii;
 
 class LogfiledatewriterController extends \yii\console\Controller{
 
-    private $logFilePath = "/var/www/project/frontend/web/log.txt";
+    private $logFilePath = "/var/www/project/frontend/web/logSalary.txt";
     public function actionWrite()
     {   
         Yii::$app->formatter->locale = 'ru-RU';
