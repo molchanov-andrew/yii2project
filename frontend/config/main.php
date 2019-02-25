@@ -15,6 +15,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'enableCsrfValidation' => false,
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -45,6 +46,7 @@ return [
                 'news' => 'test/index',
                 'news/<id:.*+>' => 'test/view',
                 'news-count' => 'countnews/index',
+                'subscribnews' => 'newsletter/subscribe',
             ],
         ],
         'stringHelper' => [
