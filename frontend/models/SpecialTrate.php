@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models\example;
+namespace frontend\models;
 
 trait SpecialTrate
 {

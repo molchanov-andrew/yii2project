@@ -17,7 +17,7 @@ class NewsletterController extends Controller{
         if (Yii::$app->request->isPost){ //если данные отправлялись выполняем скрипт, если нет - отображаем страницу
             // записываем в обьект модели данные из формы
             $model->email = $formData['email'];
-            //усли валидация ок, записывам данные в БД
+            //если валидация ок, записывам данные в БД
             if ($model->validate() && $model->save($model['email'])){ // если валидация прошла успешно и записываем в БД
                 //создаем шаблон флеш сообщения
                 Yii::$app->session->setFlash('subscriberStatus', 'Subscribe compleet');

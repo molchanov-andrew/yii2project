@@ -1,9 +1,10 @@
 <?php
+
 $params = array_merge(
-    require __DIR__ . '/../../common/config/params.php',
-    require __DIR__ . '/../../common/config/params-local.php',
-    require __DIR__ . '/params.php',
-    require __DIR__ . '/params-local.php'
+        require __DIR__ . '/../../common/config/params.php',
+        require __DIR__ . '/../../common/config/params-local.php',
+        require __DIR__ . '/params.php',
+        require __DIR__ . '/params-local.php'
 );
 
 return [
@@ -38,7 +39,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -52,10 +52,13 @@ return [
         'stringHelper' => [
             'class' => 'common\components\StringHelper',
         ],
-        'stringHelperAdvance' =>[
+        'stringHelperAdvance' => [
             'class' => 'common\components\StringHelperAdvance',
         ],
     ],
-    
     'params' => $params,
+    'aliases' =>[
+        '@files' => '/var/www/project/frontend/web/files',
+        '@photos' => '@files/photos',
+    ]
 ];

@@ -14,6 +14,8 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        // my alias for write to log file curent date
+        '@logfile' => '/var/www/project/frontend/web',
     ],
     'controllerMap' => [
         'fixture' => [

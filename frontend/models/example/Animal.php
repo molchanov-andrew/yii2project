@@ -2,7 +2,8 @@
 
 namespace frontend\models\example;
 
+
 class Animal {
 
-    use SpecialTrate;  
+    use \frontend\models\SpecialTrate;  
 }

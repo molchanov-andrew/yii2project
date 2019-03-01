@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use yii\base\Model;
+use Yii;
 
 
 class Employee extends Model{
@@ -41,5 +42,12 @@ class Employee extends Model{
     public function save()
     {
         return true;
+    }
+    
+    public function getEmployeeSalary($max)
+    {
+        $sql = 'SELECT * FROM employee ORDER by salary DESC LIMIT '.$max;
+        $res = Yii::$app->db->createCommand($sql)->queryAll();
+        return $res;        
     }
 }

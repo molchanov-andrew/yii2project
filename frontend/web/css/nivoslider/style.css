@@ -1,0 +1,17 @@
+
+#slider {
+    position:relative;
+    width:618px; /* Изменить размер картинки */
+    height:246px; /* Изменить размер картинки */
+    /*background: no-repeat 50% 50%;*/
+}
+#slider > img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+#slider a {
+    border:0;
+    display:block;
+}

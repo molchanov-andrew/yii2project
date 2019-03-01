@@ -4,6 +4,6 @@ namespace frontend\models\example;
 
 class Human {
 
-    use SpecialTrate;
+    use \frontend\models\SpecialTrate;
     
 }
