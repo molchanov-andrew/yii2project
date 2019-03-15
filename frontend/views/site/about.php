@@ -21,6 +21,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     </div>
     <div class="col-md-3">
-        <?php echo EmployeeSalaryWidget::widget(['showLimit' => 5]); ?>;
+        <?php echo EmployeeSalaryWidget::widget(['showLimit' => 5]); ?>
     </div>
 </div>

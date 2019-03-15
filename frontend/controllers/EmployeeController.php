@@ -54,12 +54,10 @@ class EmployeeController extends Controller{
         $model = new Employee(); // создаем объект модели 
         $model->scenario = Employee::SCENARIO_EMPLOYEE_REGISTER; //указываем что использовать нужно сценарий именно этот
 
-        $formData = Yii::$app->request->post(); // получаем данные из формы
         
         // проверяем если отправлена форма то работаем с ней
-        if(Yii::$app->request->isPost){
-            // присваиваем данные из формы в объект  класса Emploee
-            $model->attributes = $formData;
+        if($model->load(Yii::$app->request->post())){
+          
             // валидируем данные полSученные из формы
             if($model->validate() && /*сохраняем данные*/ $model->save()){
                 // если валидация ок и данные сохранены создаем флеш сообщение

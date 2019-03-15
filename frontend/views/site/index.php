@@ -28,7 +28,7 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-lg-4">
-            <?php echo NewsList::widget(['showLimit' => 2]); ?>;
+            <?php echo NewsList::widget(['showLimit' => 2]); ?>
             </div>
             <div class="col-lg-4">
             <?php echo EmployeeSalaryWidget::widget(['showLimit' =>3]); ?>

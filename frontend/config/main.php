@@ -46,7 +46,7 @@ return [
                 'news' => 'test/index',
                 'news/<id:.*+>' => 'test/view',
                 'news-count' => 'countnews/index',
-                'subscribnews' => 'newsletter/subscribe',
+                'newsletter/subscribe' => 'newsletter/subscribe',
             ],
         ],
         'stringHelper' => [
@@ -60,5 +60,6 @@ return [
     'aliases' =>[
         '@files' => '/var/www/project/frontend/web/files',
         '@photos' => '@files/photos',
+        '@images' => '/files/photos',
     ]
 ];
