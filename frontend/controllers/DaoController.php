@@ -54,7 +54,7 @@ class DaoController extends \yii\web\Controller {
 //        return $this->render('index');
 //        
 //-----------------------------------------------------------------------------
-        $sql1 = 'SELECT * FROM news WHERE id=3';
+        $sql1 = 'SELECT * FROM news WHERE id=25';
         $res1 = \Yii::$app->db->createCommand($sql1)->queryOne();
         echo '<pre>';
         print_r($res1);

@@ -16,10 +16,10 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
-            'enableCsrfValidation' => false,
+            'enableCsrfValidation' => true, // защита от CSRF инъекций
         ],
-        'user' => [
-            'identityClass' => 'common\models\User',
+          'user' => [
+            'identityClass' => 'frontend\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],

@@ -1,8 +1,11 @@
 <?php
 /* @result  */
+use yii\helpers\Url;
 ?>
 <h1>Book</h1>
+<a href="<?= Url::to('create');?>" class="btn btn-primary">Create book</a>
 
+<br><br>
 <?php foreach ($bookList as $book): ?>
 
     <div class="col-md-10">
@@ -24,6 +27,7 @@
         
         <p><?php echo $author->first_name.'  '.$author->last_name;?></p>
         <?php endforeach;?>
+      
     </div>
     <hr>
 

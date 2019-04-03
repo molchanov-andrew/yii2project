@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 use frontend\models\Book;
 use Yii;
+use frontend\models\Publisher;
 
 class BookshopController extends \yii\web\Controller
 {
@@ -31,6 +32,7 @@ class BookshopController extends \yii\web\Controller
     public  function actionCreate()
     {
         $book = new Book();
+        $publishers = Publisher::getList();
         
         if ($book->load(\Yii::$app->request->post())){
             
@@ -41,7 +43,8 @@ class BookshopController extends \yii\web\Controller
         }
         
         return $this->render('create', [
-            'book'=>$book,
+            'book' => $book,
+            'publishers' => $publishers,
         ]);
     }
 

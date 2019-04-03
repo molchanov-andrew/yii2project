@@ -1,7 +1,6 @@
 <?php
 
-use yii\db\ActiveRecord;
-use Yii;
+
 
 namespace frontend\models;
 
@@ -22,6 +21,7 @@ class Book extends \yii\db\ActiveRecord{
     {
         return [
             [['name', 'publisher_id'], 'required'],
+            [['date_published'], 'date', 'format' => 'php:Y-m-d'],
         ];
     }
 
